@@ -105,7 +105,7 @@ const seo = {
       <PostImage filename={article.image} alt={article.title} width={1240} height={620} loading="eager" sizes="(max-width:1240px) 100vw, 1240px" />
     </div>
 
-    <div class="article-layout">
+    <div class={`article-layout${toc.length === 0 ? ' no-toc' : ''}`}>
       <div>
         <ArticleContent article={article} />
       </div>
