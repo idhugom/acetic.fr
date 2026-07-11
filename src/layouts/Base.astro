@@ -1,0 +1,62 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import '../styles/components.css';
+
+const { seo = {}, progress = false } = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#09090C" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Acetic — Classements TOP 5" href="/rss.xml" />
+
+    <link rel="preload" href="/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <SEO {...seo} />
+    <ClientRouter />
+  </head>
+  <body>
+    <!-- fonds animés -->
+    <div class="bg-fx" aria-hidden="true">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="blob b3"></span>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+
+    {progress && <div class="read-progress" aria-hidden="true"></div>}
+
+    <Header />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      import '../lib/animations.js';
+    </script>
+
+    <style is:global>
+      /* Animation douce des blobs de fond */
+      @media (prefers-reduced-motion: no-preference) {
+        .bg-fx .b1 { animation: float1 22s ease-in-out infinite; }
+        .bg-fx .b2 { animation: float2 26s ease-in-out infinite; }
+        .bg-fx .b3 { animation: float3 30s ease-in-out infinite; }
+        @keyframes float1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(6vw,5vh) scale(1.1)} }
+        @keyframes float2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-5vw,4vh) scale(1.08)} }
+        @keyframes float3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(4vw,-6vh) scale(1.12)} }
+      }
+    </style>
+  </body>
+</html>

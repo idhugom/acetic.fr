@@ -1,0 +1,173 @@
+---
+const { article } = Astro.props;
+const c = article.content;
+
+const calloutIcon = { astuce: '💡', info: 'ℹ️', attention: '⚠️', eco: '🌿', budget: '💶' };
+const calloutLabel = { astuce: "Astuce d'expert", info: 'Bon à savoir', attention: 'À éviter', eco: 'Le réflexe éco', budget: 'Côté budget' };
+const rankWord = { 1: 'N°1', 2: 'N°2', 3: 'N°3', 4: 'N°4', 5: 'N°5' };
+
+// Répartit les encarts entre les blocs (après items d'index 0, 2, 4…)
+const items = c?.items || [];
+const callouts = c?.callouts || [];
+function calloutAfter(i) {
+  // place callouts après les blocs pairs, en séquence
+  const slots = [0, 2, 4, 1, 3];
+  const pos = slots.indexOf(i);
+  return pos !== -1 && callouts[pos] ? callouts[pos] : null;
+}
+---
+{c ? (
+  <div class="article-body-rich" data-article-body>
+    {/* Intro */}
+    <div class="prose" set:html={c.intro_html} />
+
+    {/* Réponse rapide */}
+    {c.quick_answer && (
+      <div class="quick-answer" data-reveal id="essentiel">
+        <span class="qa-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg> L'essentiel en 30 secondes</span>
+        <div class="prose" set:html={c.quick_answer.summary_html} />
+        {c.quick_answer.winner && (
+          <div class="qa-winner">
+            <span class="medal" aria-hidden="true">🏆</span>
+            <span>Notre grand gagnant : <b>{c.quick_answer.winner}</b>{c.quick_answer.winner_reason ? ` — ${c.quick_answer.winner_reason}` : ''}</span>
+          </div>
+        )}
+      </div>
+    )}
+
+    {/* Critères */}
+    {c.criteria?.length > 0 && (
+      <section data-reveal>
+        <div class="a-section-label">Notre méthode de classement</div>
+        <div class="criteria-grid" data-reveal-stagger>
+          {c.criteria.map((cr, i) => (
+            <div class="criteria-item">
+              <span class="cnum">{String(i + 1).padStart(2, '0')}</span>
+              <h4>{cr.name}</h4>
+              <p>{cr.why}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* Comparatif */}
+    {c.comparison?.rows?.length > 0 && (
+      <section data-reveal id="comparatif">
+        <div class="a-section-label">Le comparatif en un coup d'œil</div>
+        <div class="cmp-wrap">
+          <table class="cmp-table">
+            {c.comparison.title && <caption>{c.comparison.title}</caption>}
+            <thead>
+              <tr>{c.comparison.columns.map((col) => <th scope="col">{col}</th>)}</tr>
+            </thead>
+            <tbody>
+              {c.comparison.rows.map((row) => (
+                <tr>
+                  {row.cells.map((cell, ci) => (ci === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )}
+
+    {/* TOP 5 détaillé */}
+    <div class="a-section-label" id="classement">Notre TOP 5 en détail</div>
+    {items.map((it, i) => (
+      <>
+        <section class="rank-block" data-rank={it.rank} id={`rang-${it.rank}`} data-reveal>
+          <div class="rank-head">
+            <div class="rank-num">{it.rank}</div>
+            <div class="rank-head-txt">
+              {it.badge && <span class="rank-badge">{it.badge}</span>}
+              <h3 class="rank-name">{it.name}</h3>
+              {it.tagline && <p class="rank-tagline">{it.tagline}</p>}
+            </div>
+          </div>
+
+          <div class="rank-attrs">
+            {typeof it.rating === 'number' && (
+              <div class="rank-attr">
+                <div class="k">Note</div>
+                <div class="v">
+                  <span class="rating"><span class="stars" data-rating={it.rating}></span><span class="num">{it.rating.toFixed(1)}</span></span>
+                </div>
+              </div>
+            )}
+            {it.price_hint && it.price_hint !== '—' && (
+              <div class="rank-attr"><div class="k">Prix indicatif</div><div class="v">{it.price_hint}</div></div>
+            )}
+            {it.best_for && (
+              <div class="rank-attr"><div class="k">Idéal pour</div><div class="v">{it.best_for}</div></div>
+            )}
+          </div>
+
+          <div class="prose" set:html={it.body_html} />
+
+          {(it.pros?.length || it.cons?.length) && (
+            <div class="proscons">
+              <div class="col pros">
+                <h5><span aria-hidden="true">✓</span> Les plus</h5>
+                <ul>{(it.pros || []).map((p) => <li>{p}</li>)}</ul>
+              </div>
+              <div class="col cons">
+                <h5><span aria-hidden="true">✕</span> Les moins</h5>
+                <ul>{(it.cons || []).map((p) => <li>{p}</li>)}</ul>
+              </div>
+            </div>
+          )}
+        </section>
+
+        {calloutAfter(i) && (
+          <aside class={`callout ${calloutAfter(i).type}`} data-reveal>
+            <div class="c-head"><span class="c-ico" aria-hidden="true">{calloutIcon[calloutAfter(i).type] || '💡'}</span>{calloutAfter(i).title || calloutLabel[calloutAfter(i).type]}</div>
+            <div set:html={calloutAfter(i).html} />
+          </aside>
+        )}
+      </>
+    ))}
+
+    {/* Encarts restants non placés */}
+    {callouts.slice(5).map((co) => (
+      <aside class={`callout ${co.type}`} data-reveal>
+        <div class="c-head"><span class="c-ico" aria-hidden="true">{calloutIcon[co.type] || '💡'}</span>{co.title || calloutLabel[co.type]}</div>
+        <div set:html={co.html} />
+      </aside>
+    ))}
+
+    {/* Verdict */}
+    {c.verdict_html && (
+      <section class="verdict" data-reveal id="verdict">
+        <div class="v-label">Le verdict</div>
+        <div class="prose" set:html={c.verdict_html} />
+      </section>
+    )}
+
+    {/* FAQ */}
+    {c.faq?.length > 0 && (
+      <section data-reveal id="faq">
+        <div class="a-section-label">Questions fréquentes</div>
+        <div class="faq">
+          {c.faq.map((f) => (
+            <details>
+              <summary>{f.question}<span class="q-ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+              <div class="faq-body prose" set:html={f.answer_html} />
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* Méthodologie */}
+    {c.methodology_html && (
+      <div class="methodology"><b>Notre méthodologie —</b> <span set:html={c.methodology_html} /></div>
+    )}
+  </div>
+) : (
+  <div class="article-body-rich" data-article-body>
+    <div class="prose" set:html={article.old_html} />
+    <p class="methodology" style="margin-top:2rem;"><b>Contenu enrichi en cours —</b> la version augmentée de ce classement (comparatif, avis détaillés, FAQ) arrive très prochainement.</p>
+  </div>
+)}

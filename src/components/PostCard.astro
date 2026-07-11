@@ -1,0 +1,36 @@
+---
+import PostImage from './PostImage.astro';
+import { slugifyUnivers, universMeta, readingTime } from '../lib/site.js';
+
+const { article, rank, feature = false } = Astro.props;
+const meta = universMeta(article.univers);
+const rt = readingTime(article);
+const uSlug = slugifyUnivers(article.univers);
+---
+<article class={`pcard${feature ? ' feature' : ''}`} data-reveal>
+  <a href={`/articles/${article.slug}`} class="pcard-media" aria-label={article.title}>
+    <PostImage
+      filename={article.image}
+      alt={article.title}
+      width={feature ? 760 : 520}
+      height={feature ? 500 : 325}
+      loading={feature ? 'eager' : 'lazy'}
+      sizes={feature ? '(max-width:720px) 100vw, 55vw' : '(max-width:720px) 100vw, 33vw'}
+    />
+    {rank && <span class="pcard-rank">{String(rank).padStart(2, '0')}</span>}
+  </a>
+  <div class="pcard-univers">
+    <span class="chip" style={`color:${meta.accent};border-color:color-mix(in srgb, ${meta.accent} 40%, transparent)`}>
+      <span aria-hidden="true">{meta.emoji}</span> {article.univers}
+    </span>
+  </div>
+  <div class="pcard-body">
+    <h3><a href={`/articles/${article.slug}`}>{article.title}</a></h3>
+    <div class="pcard-meta">
+      <span>{rt} min de lecture</span>
+      <a href={`/articles/${article.slug}`} class="pcard-arrow" aria-hidden="true" tabindex="-1">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</article>

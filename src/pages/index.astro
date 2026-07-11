@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import PostImage from '../components/PostImage.astro';
+import { articles, universWithSlug, slugifyUnivers, universMeta, SITE } from '../lib/site.js';
+
+// Featured : les articles enrichis d'abord, puis les plus récents
+const sorted = [...articles].sort((a, b) => (b.content ? 1 : 0) - (a.content ? 1 : 0) || new Date(b.date) - new Date(a.date));
+const featured = sorted.slice(0, 5);
+const latest = articles.filter((a) => !featured.includes(a)).slice(0, 8);
+const univers = universWithSlug();
+const leaderRatings = [4.9, 4.8, 4.6, 4.5, 4.3];
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.domain,
+  description: SITE.description,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.domain}/classements?q={query}`,
+    'query-input': 'required name=query',
+  },
+};
+---
+<Base seo={{ jsonld }}>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" data-hero data-parallax-root>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow hero-eyebrow" data-hero-fade>Le média des classements</span>
+          <h1 class="hero-title">
+            <span class="line"><span class="out">Le meilleur,</span></span>
+            <span class="line"><span class="fill">en&nbsp;TOP&nbsp;5.</span></span>
+          </h1>
+          <p class="hero-sub" data-hero-fade>
+            On teste, on compare et on tranche. {articles.length} palmarès argumentés, notés et mis à jour —
+            pour trouver le meilleur de chaque univers <strong>sans y passer la nuit</strong>.
+          </p>
+          <div class="hero-actions" data-hero-fade>
+            <a href="/classements" class="btn btn-primary" data-magnetic>
+              Découvrir les classements
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="/univers" class="btn btn-ghost">Explorer par univers</a>
+          </div>
+          <div class="hero-stats" data-hero-fade>
+            <div class="hero-stat"><span class="n" data-count={articles.length}>0</span><span class="l">Classements</span></div>
+            <div class="hero-stat"><span class="n" data-count={univers.length}>0</span><span class="l">Univers</span></div>
+            <div class="hero-stat"><span class="n" data-count={articles.length * 5}>0</span><span class="l">Champions élus</span></div>
+            <div class="hero-stat"><span class="n" data-count="100" data-suffix="%">0</span><span class="l">Indépendant</span></div>
+          </div>
+        </div>
+
+        <!-- Leaderboard vitrine -->
+        <aside class="leaderboard" data-hero-fade aria-label="Top 5 de la semaine">
+          <div class="lb-head">
+            <span class="chip chip-lime">● En direct</span>
+            <span>Top 5 de la semaine</span>
+          </div>
+          <ol class="lb-list">
+            {featured.map((a, i) => {
+              const m = universMeta(a.univers);
+              return (
+                <li class="lb-row">
+                  <a href={`/articles/${a.slug}`}>
+                    <span class={`lb-rank r${i + 1}`}>{i + 1}</span>
+                    <span class="lb-thumb"><PostImage filename={a.image} alt="" width={90} height={64} sizes="90px" /></span>
+                    <span class="lb-meta">
+                      <span class="lb-title">{a.title}</span>
+                      <span class="lb-uni" style={`color:${m.accent}`}>{m.emoji} {a.univers}</span>
+                    </span>
+                    <span class="lb-score" style={`--pct:${(leaderRatings[i] / 5) * 100}%`}><b>{leaderRatings[i].toFixed(1)}</b></span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      {[...univers, ...univers].map((u) => <span>{u.name}</span>)}
+    </div>
+  </div>
+
+  <!-- ===================== À LA UNE (Top 5) ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">À la une</span>
+          <h2 class="section-title">Le <span class="em">TOP 5</span> à ne pas rater</h2>
+        </div>
+        <p class="section-sub">Nos palmarès les plus consultés du moment, du n°1 au n°5.</p>
+      </div>
+      <div class="cards-grid">
+        {featured.map((a, i) => <PostCard article={a} rank={i + 1} feature={i === 0} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== UNIVERS ===================== -->
+  <section class="section" style="background:var(--bg-2);border-block:1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">12 territoires</span>
+          <h2 class="section-title">Explorez par <span class="em">univers</span></h2>
+        </div>
+        <a href="/univers" class="btn btn-ghost">Tout voir</a>
+      </div>
+      <div class="univers-grid" data-reveal-stagger>
+        {univers.map((u) => {
+          const m = universMeta(u.name);
+          return (
+            <a class="univers-card" href={`/univers/${u.slug}`}>
+              <span class="u-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <div>
+                <div class="u-count">{String(u.count).padStart(2, '0')}</div>
+              </div>
+              <div>
+                <div style={`font-size:1.3rem;margin-bottom:.2rem`} aria-hidden="true">{m.emoji}</div>
+                <h3>{u.name}</h3>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DERNIERS ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Frais du jour</span>
+          <h2 class="section-title">Les derniers <span class="em">classements</span></h2>
+        </div>
+        <a href="/classements" class="btn btn-ghost">Tous les classements</a>
+      </div>
+      <div class="cards-grid">
+        {latest.map((a) => <PostCard article={a} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band" data-reveal>
+        <div class="cta-huge" aria-hidden="true">N°1</div>
+        <div class="cta-copy">
+          <h2 class="section-title">Prêt à trouver <span class="em">le meilleur</span> ?</h2>
+          <p class="section-sub" style="margin-top:.6rem;">Parcourez {articles.length} classements TOP 5, comparez en un coup d'œil et décidez en confiance.</p>
+          <a href="/classements" class="btn btn-primary" data-magnetic style="margin-top:1.4rem;">
+            Voir tous les TOP 5
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
+  .hero-copy { min-width: 0; }
+  @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  /* Leaderboard */
+  .leaderboard { border: 1px solid var(--border-2); border-radius: var(--radius-lg); background: linear-gradient(180deg, var(--surface-2), var(--surface)); padding: 1.1rem; box-shadow: var(--shadow); }
+  .lb-head { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-ui); font-weight: 600; font-size: .82rem; color: var(--text-dim); padding: .3rem .4rem 1rem; text-transform: uppercase; letter-spacing: .04em; }
+  .lb-head .chip-lime { text-transform: none; letter-spacing: 0; }
+  .lb-list { display: flex; flex-direction: column; gap: .35rem; }
+  .lb-row a { display: grid; grid-template-columns: auto 56px 1fr auto; align-items: center; gap: .8rem; padding: .6rem; border-radius: 14px; transition: background .25s; }
+  .lb-row a:hover { background: rgba(255,255,255,.04); }
+  .lb-rank { font-family: var(--font-display); font-size: 1.7rem; width: 1.5rem; text-align: center; color: var(--text-mute); }
+  .lb-rank.r1 { color: var(--gold); } .lb-rank.r2 { color: var(--silver); } .lb-rank.r3 { color: var(--bronze); }
+  .lb-thumb { width: 56px; height: 42px; border-radius: 9px; overflow: hidden; }
+  .lb-thumb :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .lb-meta { min-width: 0; }
+  .lb-title { display: block; font-family: var(--font-ui); font-weight: 600; font-size: .9rem; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .lb-uni { font-size: .72rem; font-family: var(--font-ui); }
+  .lb-score { position: relative; font-family: var(--font-ui); font-weight: 700; font-size: .8rem; color: var(--gold); }
+
+  /* CTA band */
+  .cta-band { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid var(--border-2); padding: clamp(2rem, 6vw, 4.5rem); background: radial-gradient(120% 140% at 100% 0%, rgba(212,255,61,.14), transparent 55%), linear-gradient(135deg, var(--surface-2), var(--surface)); }
+  .cta-huge { position: absolute; right: -1rem; bottom: -3rem; font-family: var(--font-display); font-size: clamp(7rem, 24vw, 20rem); line-height: .8; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.07); pointer-events: none; }
+  .cta-copy { position: relative; max-width: 40ch; }
+</style>

@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import { universWithSlug, universMeta, articlesByUnivers } from '../../lib/site.js';
+import PostImage from '../../components/PostImage.astro';
+const univers = universWithSlug();
+---
+<Base seo={{ title: 'Les univers', description: 'Parcourez tous les univers de classements TOP 5 d’Acetic : tech, argent, bien-être, maison, food, voyage, mode, auto et bien plus.' }}>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">12 territoires à explorer</span>
+      <h1>Les <span class="text-grad">univers</span></h1>
+      <p>Chaque univers, ses champions. Choisissez votre terrain de jeu et plongez dans nos palmarès.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:2rem;">
+    <div class="wrap">
+      <div class="uni-big-grid" data-reveal-stagger>
+        {univers.map((u) => {
+          const m = universMeta(u.name);
+          const sample = articlesByUnivers(u.name).slice(0, 3);
+          return (
+            <a class="uni-big" href={`/univers/${u.slug}`}>
+              <div class="uni-big-top">
+                <span class="uni-emoji" aria-hidden="true">{m.emoji}</span>
+                <span class="uni-num">{String(u.count).padStart(2, '0')}</span>
+              </div>
+              <h2 style={`--accent:${m.accent}`}>{u.name}</h2>
+              <div class="uni-thumbs">
+                {sample.map((a) => <span class="uni-thumb"><PostImage filename={a.image} alt="" width={80} height={56} sizes="80px" /></span>)}
+              </div>
+              <span class="uni-go">Explorer <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .uni-big-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
+  .uni-big { position: relative; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; transition: transform .45s var(--ease), border-color .3s; overflow: hidden; }
+  .uni-big:hover { transform: translateY(-6px); border-color: var(--border-2); }
+  .uni-big-top { display: flex; align-items: center; justify-content: space-between; }
+  .uni-emoji { font-size: 1.8rem; }
+  .uni-num { font-family: var(--font-display); font-size: 2.6rem; color: transparent; -webkit-text-stroke: 1.4px var(--border-2); }
+  .uni-big h2 { font-family: var(--font-ui); font-size: 1.5rem; }
+  .uni-big:hover h2 { color: var(--accent); }
+  .uni-thumbs { display: flex; gap: .5rem; }
+  .uni-thumb { width: 62px; height: 44px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .uni-thumb :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .uni-go { margin-top: auto; display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-ui); font-weight: 600; font-size: .9rem; color: var(--text-dim); }
+  .uni-big:hover .uni-go { color: var(--accent); }
+</style>

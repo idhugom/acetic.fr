@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import { articles, universWithSlug, slugifyUnivers } from '../lib/site.js';
+const univers = universWithSlug();
+---
+<Base seo={{ title: 'Tous les classements', description: `Les ${articles.length} classements TOP 5 d’Acetic, filtrables par univers. Le meilleur de la tech, de l’argent, du bien-être, de la maison, du voyage et bien plus.` }}>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">{articles.length} palmarès</span>
+      <h1>Tous les <span class="text-grad">classements</span></h1>
+      <p>Filtrez par univers et trouvez le TOP 5 qu'il vous faut. On a fait le tri, à vous de choisir.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1.5rem;">
+    <div class="wrap">
+      <div class="filter-bar" role="tablist" aria-label="Filtrer par univers">
+        <button class="active" data-filter="all" role="tab" aria-selected="true">Tous <span class="text-dim">· {articles.length}</span></button>
+        {univers.map((u) => (
+          <button data-filter={u.slug} role="tab" aria-selected="false">{u.name} <span class="text-dim">· {u.count}</span></button>
+        ))}
+      </div>
+      <div class="cards-grid" id="grid">
+        {articles.map((a) => (
+          <div data-univers={slugifyUnivers(a.univers)} style="display:contents;">
+            <PostCard article={a} />
+          </div>
+        ))}
+      </div>
+      <p id="empty" class="text-dim" style="display:none;text-align:center;padding:3rem 0;">Aucun classement dans cet univers pour l'instant.</p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  function initFilter() {
+    const buttons = document.querySelectorAll('.filter-bar [data-filter]');
+    const cards = document.querySelectorAll('#grid [data-univers]');
+    const empty = document.getElementById('empty');
+    if (!buttons.length) return;
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const f = btn.getAttribute('data-filter');
+        buttons.forEach((b) => { b.classList.toggle('active', b === btn); b.setAttribute('aria-selected', b === btn ? 'true' : 'false'); });
+        let shown = 0;
+        cards.forEach((card) => {
+          const match = f === 'all' || card.getAttribute('data-univers') === f;
+          card.querySelector('.pcard')?.classList.toggle('hidden', !match);
+          if (match) shown++;
+        });
+        if (empty) empty.style.display = shown ? 'none' : 'block';
+      });
+    });
+  }
+  document.addEventListener('astro:page-load', initFilter);
+</script>

@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site.js';
+---
+<Base seo={{ title: 'Mentions légales', description: 'Mentions légales et informations éditoriales du site Acetic.fr.' }}>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Informations</span>
+      <h1>Mentions <span class="text-grad">légales</span></h1>
+    </div>
+  </section>
+  <section class="section" style="padding-top:1.5rem;">
+    <div class="wrap" style="max-width:760px;">
+      <div class="prose">
+        <h3>Éditeur</h3>
+        <p>Le site <strong>{SITE.name}.fr</strong> ({SITE.tagline}) est édité et mis à jour par son équipe éditoriale. Pour toute demande, contactez-nous via les canaux indiqués sur le site.</p>
+        <h3>Hébergement</h3>
+        <p>Le site est hébergé sur l'infrastructure <strong>Cloudflare Pages</strong> (Cloudflare, Inc.), réseau de diffusion mondial.</p>
+        <h3>Propriété intellectuelle</h3>
+        <p>L'ensemble des contenus (textes, classements, mises en forme) présents sur {SITE.name}.fr est protégé par le droit d'auteur. Toute reproduction sans autorisation est interdite.</p>
+        <h3>Contenus &amp; classements</h3>
+        <p>Nos classements sont établis à titre informatif, à partir de critères explicités dans chaque article. Ils reflètent une analyse éditoriale à un instant donné et ne constituent pas un conseil professionnel, médical, financier ou juridique.</p>
+        <h3>Données personnelles</h3>
+        <p>Ce site privilégie une approche respectueuse de la vie privée et ne collecte pas de données personnelles à des fins commerciales sans consentement. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.</p>
+        <h3>Liens externes</h3>
+        <p>Certains articles peuvent contenir des liens vers des sites tiers. {SITE.name}.fr n'est pas responsable du contenu de ces sites externes.</p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose h3 { font-family: var(--font-ui); font-size: 1.25rem; margin-top: 2rem; margin-bottom: .5rem; color: var(--text); }
+  .prose h3:first-child { margin-top: 0; }
+</style>

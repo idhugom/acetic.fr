@@ -1,0 +1,36 @@
+---
+import { universWithSlug, SITE } from '../lib/site.js';
+const univers = universWithSlug().slice(0, 6);
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap wrap-wide">
+    <div class="footer-huge" aria-hidden="true">TOP&nbsp;5</div>
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand" style="font-size:1.4rem;margin-bottom:1rem;">
+          <span class="mark">T5</span><span><b>Acetic</b><span class="dot">.</span></span>
+        </a>
+        <p class="text-dim" style="max-width:38ch;font-size:.95rem;">
+          {SITE.tagline}. On teste, on compare, on classe — pour que vous décidiez vite et bien.
+        </p>
+      </div>
+      <div>
+        <h4>Univers</h4>
+        {univers.map((u) => <a href={`/univers/${u.slug}`}>{u.name}</a>)}
+      </div>
+      <div>
+        <h4>Le site</h4>
+        <a href="/classements">Tous les classements</a>
+        <a href="/univers">Les univers</a>
+        <a href="/a-propos">À propos</a>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/rss.xml">Flux RSS</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {SITE.name}. Tous droits réservés.</span>
+      <span>Fait avec ★ en France — palmarès mis à jour en continu.</span>
+    </div>
+  </div>
+</footer>

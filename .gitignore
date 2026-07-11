@@ -1,0 +1,25 @@
+# build output
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# logs
+npm-debug.log*
+*.log
+
+# env
+.env
+.env.production
+.dev.vars
+
+# os
+.DS_Store
+Thumbs.db
+
+# scratch / build intermediates
+scripts/wp_posts.json
+scripts/batch_output.jsonl
+scripts/.batch_id
+scripts/.batch_file_id
