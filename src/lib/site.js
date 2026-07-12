@@ -2,7 +2,7 @@ import data from '../data/articles.json';
 
 export const SITE = {
   name: 'Acetic',
-  domain: 'https://acetic.fr',
+  domain: 'https://www.acetic.fr',
   tagline: 'Le média des classements TOP 5',
   description:
     "Acetic.fr décrypte et classe le meilleur de chaque univers en TOP 5 : tech, argent, bien-être, maison, food, voyage… Des palmarès clairs, comparés et argumentés pour décider vite et bien.",
@@ -38,6 +38,12 @@ export function findUniversBySlug(slug) {
 
 export function getArticle(slug) {
   return articles.find((a) => a.slug === slug);
+}
+
+/** URL d'un article — structure IDENTIQUE au WordPress d'origine (/top5/{slug}.htm)
+ *  pour préserver 100% du référencement et des backlinks existants. */
+export function articleUrl(slug) {
+  return `/top5/${slug}.htm`;
 }
 
 export function related(article, n = 3) {

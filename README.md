@@ -80,15 +80,17 @@ Le workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) build
 - **Répertoire racine :** *(vide)*
 - **Commentaires de build (previews) :** activés
 
-### Domaine personnalisé & DNS (à faire quand le domaine sera sur Cloudflare)
+### Domaine personnalisé & DNS — **configuré**
 
-1. **Cloudflare → Pages → projet `acetic` → Custom domains** : ajouter `acetic.fr` **et**
-   `www.acetic.fr`.
-2. Basculer les **DNS du domaine** vers Cloudflare (nameservers Cloudflare), puis Cloudflare
-   crée automatiquement les enregistrements `CNAME` vers `acetic.pages.dev`.
-3. Définir `acetic.fr` comme domaine **principal**.
-4. **Redirection `www` → sans `www`** : Cloudflare → **Rules → Redirect Rules** :
-   - *Si* `Hostname` = `www.acetic.fr` → *Rediriger (301)* vers
-     `https://acetic.fr/${http.request.uri.path}` (préserver la chaîne de requête).
+Réalisé automatiquement via l'API Cloudflare :
 
-Le site est déjà configuré avec `acetic.fr` (apex) comme URL canonique.
+1. Domaines perso ajoutés au projet Pages : `www.acetic.fr` (**principal / canonique**) et `acetic.fr` (apex).
+2. Enregistrements DNS créés : `CNAME www → acetic.pages.dev` et `CNAME acetic.fr → acetic.pages.dev` (proxifiés).
+
+**Reste 1 étape manuelle** (le token API fourni n'a pas la permission « Redirect Rules ») —
+**redirection apex → www** : Cloudflare → zone `acetic.fr` → **Rules → Redirect Rules → Create** :
+- *Quand* `Hostname` **equals** `acetic.fr` → *Redirection statique/dynamique 301* vers
+  `concat("https://www.acetic.fr", http.request.uri.path)`, **Preserve query string** activé.
+
+Le site est configuré avec **`www.acetic.fr`** comme URL canonique, et les URLs d'articles
+reproduisent **à l'identique** la structure d'origine `/top5/{slug}.htm` (aucune URL indexée cassée).

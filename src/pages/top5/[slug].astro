@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import ArticleContent from '../../components/ArticleContent.astro';
 import PostCard from '../../components/PostCard.astro';
 import PostImage from '../../components/PostImage.astro';
-import { articles, related, readingTime, slugifyUnivers, universMeta, SITE } from '../../lib/site.js';
+import { articles, related, readingTime, slugifyUnivers, universMeta, articleUrl, SITE } from '../../lib/site.js';
 import { postImage } from '../../lib/images.js';
 
 export function getStaticPaths() {
@@ -11,6 +11,7 @@ export function getStaticPaths() {
 }
 
 const { article } = Astro.props;
+const canonicalUrl = `${SITE.domain}${articleUrl(article.slug)}`;
 const c = article.content;
 const meta = universMeta(article.univers);
 const uSlug = slugifyUnivers(article.univers);
@@ -39,7 +40,7 @@ const jsonldGraph = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE.domain },
       { '@type': 'ListItem', position: 2, name: article.univers, item: `${SITE.domain}/univers/${uSlug}` },
-      { '@type': 'ListItem', position: 3, name: article.title, item: `${SITE.domain}/articles/${article.slug}` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: canonicalUrl },
     ],
   },
   {
@@ -51,7 +52,7 @@ const jsonldGraph = [
     dateModified: article.modified,
     author: { '@type': 'Organization', name: SITE.name },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.domain },
-    mainEntityOfPage: `${SITE.domain}/articles/${article.slug}`,
+    mainEntityOfPage: canonicalUrl,
     articleSection: article.univers,
   },
 ];
@@ -80,6 +81,7 @@ const seo = {
   description: c?.meta_description || article.excerpt,
   image: ogImg,
   type: 'article',
+  canonical: canonicalUrl,
   publishedTime: article.date,
   modifiedTime: article.modified,
   jsonld,
@@ -121,9 +123,9 @@ const seo = {
               </a>
             ))}
             <div class="toc-share" aria-label="Partager">
-              <a href={`https://twitter.com/intent/tweet?url=${SITE.domain}/articles/${article.slug}`} target="_blank" rel="noopener" aria-label="Partager sur X">𝕏</a>
-              <a href={`https://www.facebook.com/sharer/sharer.php?u=${SITE.domain}/articles/${article.slug}`} target="_blank" rel="noopener" aria-label="Partager sur Facebook">f</a>
-              <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${SITE.domain}/articles/${article.slug}`} target="_blank" rel="noopener" aria-label="Partager sur LinkedIn">in</a>
+              <a href={`https://twitter.com/intent/tweet?url=${canonicalUrl}`} target="_blank" rel="noopener" aria-label="Partager sur X">𝕏</a>
+              <a href={`https://www.facebook.com/sharer/sharer.php?u=${canonicalUrl}`} target="_blank" rel="noopener" aria-label="Partager sur Facebook">f</a>
+              <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${canonicalUrl}`} target="_blank" rel="noopener" aria-label="Partager sur LinkedIn">in</a>
             </div>
           </div>
         </aside>

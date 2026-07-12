@@ -6,12 +6,16 @@ const {
   description = SITE.description,
   image,
   type = 'website',
+  canonical: canonicalOverride,
   publishedTime,
   modifiedTime,
   jsonld,
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, SITE.domain).href.replace(/\/$/, '') || SITE.domain;
+const canonical =
+  canonicalOverride ||
+  new URL(Astro.url.pathname, SITE.domain).href.replace(/\/$/, '') ||
+  SITE.domain;
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
 const ogImage = image ? new URL(image, SITE.domain).href : new URL('/brand/og-default.jpg', SITE.domain).href;
 ---

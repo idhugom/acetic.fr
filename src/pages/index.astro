@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import PostImage from '../components/PostImage.astro';
-import { articles, universWithSlug, slugifyUnivers, universMeta, SITE } from '../lib/site.js';
+import { articles, universWithSlug, slugifyUnivers, universMeta, articleUrl, SITE } from '../lib/site.js';
 
 // Featured : les articles enrichis d'abord, puis les plus récents
 const sorted = [...articles].sort((a, b) => (b.content ? 1 : 0) - (a.content ? 1 : 0) || new Date(b.date) - new Date(a.date));
@@ -65,7 +65,7 @@ const jsonld = {
               const m = universMeta(a.univers);
               return (
                 <li class="lb-row">
-                  <a href={`/articles/${a.slug}`}>
+                  <a href={articleUrl(a.slug)}>
                     <span class={`lb-rank r${i + 1}`}>{i + 1}</span>
                     <span class="lb-thumb"><PostImage filename={a.image} alt="" width={90} height={64} sizes="90px" /></span>
                     <span class="lb-meta">
