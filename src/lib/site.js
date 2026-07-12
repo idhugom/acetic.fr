@@ -46,6 +46,11 @@ export function articleUrl(slug) {
   return `/top5/${slug}.htm`;
 }
 
+/** URL d'un univers (pages en répertoire -> slash final pour éviter toute redirection). */
+export function universUrl(slug) {
+  return `/univers/${slug}/`;
+}
+
 export function related(article, n = 3) {
   const same = articles.filter((a) => a.univers === article.univers && a.slug !== article.slug);
   const others = articles.filter((a) => a.univers !== article.univers && a.slug !== article.slug);

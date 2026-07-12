@@ -12,10 +12,9 @@ const {
   jsonld,
 } = Astro.props;
 
-const canonical =
-  canonicalOverride ||
-  new URL(Astro.url.pathname, SITE.domain).href.replace(/\/$/, '') ||
-  SITE.domain;
+// URL canonique : respecte le slash final (trailingSlash: 'always'), sauf pour
+// les articles qui fournissent un canonical explicite (/top5/{slug}.htm).
+const canonical = canonicalOverride || new URL(Astro.url.pathname, SITE.domain).href;
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
 const ogImage = image ? new URL(image, SITE.domain).href : new URL('/brand/og-default.jpg', SITE.domain).href;
 ---

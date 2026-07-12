@@ -40,11 +40,11 @@ const jsonld = {
             pour trouver le meilleur de chaque univers <strong>sans y passer la nuit</strong>.
           </p>
           <div class="hero-actions" data-hero-fade>
-            <a href="/classements" class="btn btn-primary" data-magnetic>
+            <a href="/classements/" class="btn btn-primary" data-magnetic>
               Découvrir les classements
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="/univers" class="btn btn-ghost">Explorer par univers</a>
+            <a href="/univers/" class="btn btn-ghost">Explorer par univers</a>
           </div>
           <div class="hero-stats" data-hero-fade>
             <div class="hero-stat"><span class="n" data-count={articles.length}>0</span><span class="l">Classements</span></div>
@@ -114,13 +114,13 @@ const jsonld = {
           <span class="eyebrow">12 territoires</span>
           <h2 class="section-title">Explorez par <span class="em">univers</span></h2>
         </div>
-        <a href="/univers" class="btn btn-ghost">Tout voir</a>
+        <a href="/univers/" class="btn btn-ghost">Tout voir</a>
       </div>
       <div class="univers-grid" data-reveal-stagger>
         {univers.map((u) => {
           const m = universMeta(u.name);
           return (
-            <a class="univers-card" href={`/univers/${u.slug}`}>
+            <a class="univers-card" href={`/univers/${u.slug}/`}>
               <span class="u-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
               <div>
                 <div class="u-count">{String(u.count).padStart(2, '0')}</div>
@@ -144,7 +144,7 @@ const jsonld = {
           <span class="eyebrow">Frais du jour</span>
           <h2 class="section-title">Les derniers <span class="em">classements</span></h2>
         </div>
-        <a href="/classements" class="btn btn-ghost">Tous les classements</a>
+        <a href="/classements/" class="btn btn-ghost">Tous les classements</a>
       </div>
       <div class="cards-grid">
         {latest.map((a) => <PostCard article={a} />)}
@@ -160,7 +160,7 @@ const jsonld = {
         <div class="cta-copy">
           <h2 class="section-title">Prêt à trouver <span class="em">le meilleur</span> ?</h2>
           <p class="section-sub" style="margin-top:.6rem;">Parcourez {articles.length} classements TOP 5, comparez en un coup d'œil et décidez en confiance.</p>
-          <a href="/classements" class="btn btn-primary" data-magnetic style="margin-top:1.4rem;">
+          <a href="/classements/" class="btn btn-primary" data-magnetic style="margin-top:1.4rem;">
             Voir tous les TOP 5
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>

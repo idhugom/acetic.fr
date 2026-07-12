@@ -20,7 +20,7 @@ const univers = universWithSlug();
           const m = universMeta(u.name);
           const sample = articlesByUnivers(u.name).slice(0, 3);
           return (
-            <a class="uni-big" href={`/univers/${u.slug}`}>
+            <a class="uni-big" href={`/univers/${u.slug}/`}>
               <div class="uni-big-top">
                 <span class="uni-emoji" aria-hidden="true">{m.emoji}</span>
                 <span class="uni-num">{String(u.count).padStart(2, '0')}</span>

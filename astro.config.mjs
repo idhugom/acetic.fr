@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // pour ne pas casser le référencement existant.
 export default defineConfig({
   site: 'https://www.acetic.fr',
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
   build: {
     format: 'directory',
     inlineStylesheets: 'auto',

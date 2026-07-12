@@ -39,7 +39,7 @@ const jsonldGraph = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE.domain },
-      { '@type': 'ListItem', position: 2, name: article.univers, item: `${SITE.domain}/univers/${uSlug}` },
+      { '@type': 'ListItem', position: 2, name: article.univers, item: `${SITE.domain}/univers/${uSlug}/` },
       { '@type': 'ListItem', position: 3, name: article.title, item: canonicalUrl },
     ],
   },
@@ -92,7 +92,7 @@ const seo = {
     <div class="article-hero">
       <nav class="a-cats" aria-label="Fil d'Ariane">
         <a class="chip" href="/">Accueil</a>
-        <a class="chip chip-lime" href={`/univers/${uSlug}`} style={`color:${meta.accent};border-color:color-mix(in srgb,${meta.accent} 40%,transparent)`}>{meta.emoji} {article.univers}</a>
+        <a class="chip chip-lime" href={`/univers/${uSlug}/`} style={`color:${meta.accent};border-color:color-mix(in srgb,${meta.accent} 40%,transparent)`}>{meta.emoji} {article.univers}</a>
       </nav>
       <h1 class="article-title">{article.title}</h1>
       {c?.hook && <p class="article-hook">{c.hook}</p>}
@@ -141,7 +141,7 @@ const seo = {
           <span class="eyebrow">À lire ensuite</span>
           <h2 class="section-title">Continuez le <span class="em">classement</span></h2>
         </div>
-        <a href={`/univers/${uSlug}`} class="btn btn-ghost">Plus de {article.univers}</a>
+        <a href={`/univers/${uSlug}/`} class="btn btn-ghost">Plus de {article.univers}</a>
       </div>
       <div class="cards-grid">
         {rel.map((a) => <PostCard article={a} />)}

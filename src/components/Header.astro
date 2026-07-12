@@ -2,9 +2,9 @@
 import { universWithSlug } from '../lib/site.js';
 const univers = universWithSlug();
 const nav = [
-  { label: 'Classements', href: '/classements' },
-  { label: 'Univers', href: '/univers' },
-  { label: 'À propos', href: '/a-propos' },
+  { label: 'Classements', href: '/classements/' },
+  { label: 'Univers', href: '/univers/' },
+  { label: 'À propos', href: '/a-propos/' },
 ];
 const path = Astro.url.pathname;
 ---
@@ -22,8 +22,8 @@ const path = Astro.url.pathname;
     </nav>
 
     <div class="header-cta">
-      <a href="/classements" class="btn btn-ghost">Explorer</a>
-      <a href="/classements" class="btn btn-primary" data-magnetic>
+      <a href="/classements/" class="btn btn-ghost">Explorer</a>
+      <a href="/classements/" class="btn btn-primary" data-magnetic>
         Voir les TOP 5
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>

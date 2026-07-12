@@ -24,8 +24,7 @@ for (const entry of entries) {
   } catch {
     continue; // pas d'index.html : on ignore
   }
-  const target = join(dir, `${slug}.htm`);
-  await rename(indexPath, target);
+  await rename(indexPath, join(dir, `${slug}.htm`));
   await rm(join(dir, slug), { recursive: true, force: true });
   count++;
 }
