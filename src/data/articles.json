@@ -15,7 +15,7 @@
     },
     {
       "name": "Maison & Déco",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Food & Cuisine",
@@ -31,7 +31,7 @@
     },
     {
       "name": "Auto & Mobilité",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Animaux",
@@ -29618,7 +29618,7 @@
             "name": "Le « cognitive shuffle » ou le bruit rose en fond",
             "tagline": "Donner au cerveau des images aléatoires à traiter plutôt qu'un fil de pensées",
             "badge": "Le plus utile en dernier recours",
-            "rating": 4.0,
+            "rating": 4,
             "price_hint": "Gratuit",
             "best_for": "Ceux qui n'arrivent pas à stopper le flux de pensées, même dans le silence complet",
             "body_html": "<p>Le « cognitive shuffle » consiste à penser à un mot neutre au hasard (par exemple « vélo »), puis à visualiser mentalement une série d'images sans lien logique entre elles évoquées par ce mot, avant de passer à un autre mot au bout de quelques secondes. L'absence de récit cohérent empêche le cerveau de construire une rumination structurée.</p><p>Le bruit rose (plus grave et enveloppant que le bruit blanc) fonctionne sur un principe proche&nbsp;: masquer les petits bruits ambiants qui maintiennent en alerte et occuper légèrement l'attention auditive, sans le contenu narratif d'un podcast qui, lui, relance l'activité cognitive au lieu de l'apaiser.</p><p>Ces deux variantes sont surtout des solutions de dernier recours, à utiliser quand les méthodes précédentes n'ont pas suffi à couper le fil des pensées.</p>",
@@ -29879,7 +29879,7 @@
             "name": "Sauvegarder les vidéos volumineuses sur un cloud gratuit tiers",
             "tagline": "Externaliser les fichiers les plus lourds sans payer plus d'iCloud",
             "badge": "Idéal pour les gros albums vidéo",
-            "rating": 4.0,
+            "rating": 4,
             "price_hint": "Gratuit à partir de 15 Go (Google Photos, Amazon Photos pour les abonnés Prime)",
             "best_for": "Les utilisateurs qui préfèrent ne pas payer d'abonnement iCloud supplémentaire",
             "body_html": "<p>Les vidéos familiales et les rafales de vacances sont souvent ce qui pèse le plus lourd sur un iPhone. Une alternative à l'abonnement iCloud payant consiste à installer l'application Google Photos (15&nbsp;Go gratuits, extensibles) ou Amazon Photos (stockage photo illimité pour les abonnés Amazon Prime) et à y sauvegarder spécifiquement les vidéos et albums les plus volumineux, puis à les supprimer de l'iPhone une fois la sauvegarde confirmée.</p><p>Cette méthode demande plus de rigueur que les précédentes&nbsp;: il faut vérifier que l'upload est bien terminé avant de supprimer quoi que ce soit en local, et accepter que ces fichiers ne soient plus consultables hors ligne depuis l'application Photos native.</p><p>Elle reste néanmoins la solution la plus économique pour qui a déjà activé l'optimisation iCloud et le tri des doublons, et qui a encore besoin de libérer de l'espace supplémentaire sans payer plus cher.</p>",
@@ -30000,6 +30000,535 @@
         ],
         "verdict_html": "<p>Le geste le plus rentable reste d'<strong>activer l'optimisation du stockage iCloud</strong> pour les photos&nbsp;: un seul réglage, aucune photo supprimée, et souvent le plus gros gain d'espace de tout ce classement. Le <strong>déchargement automatique des applications inutilisées</strong> vient compléter ce premier réglage sans effort supplémentaire une fois activé.</p><p>Pour aller plus loin, le <strong>tri des pièces jointes Messages</strong> révèle presque toujours plusieurs gigaoctets insoupçonnés, tandis que l'<strong>album Doublons</strong> et la <strong>réduction de la résolution vidéo</strong> ciblent les fichiers déjà présents les plus lourds. Le recours à un <strong>cloud gratuit tiers</strong> reste une option pour qui préfère ne pas payer d'abonnement iCloud, à condition de vérifier chaque sauvegarde avant suppression.</p>",
         "methodology_html": "<p>Ce classement s'appuie sur les réglages natifs iOS disponibles sur les versions récentes d'iPhone (Réglages › Général › Stockage iPhone et Réglages › Photos), évalués selon l'espace réellement libéré, l'absence de risque pour les données personnelles et la facilité de mise en œuvre pour un utilisateur non technique.</p>"
+      }
+    },
+    {
+      "id": 100021,
+      "slug": "top-5-solutions-recharger-voiture-electrique-sans-borne-domicile",
+      "title": "TOP 5 des solutions pour recharger une voiture électrique quand on n'a pas de borne à domicile",
+      "date": "2026-07-22T09:00:00",
+      "modified": "2026-07-22T09:00:00",
+      "image": "top-5-solutions-recharger-voiture-electrique-sans-borne-domicile.jpg",
+      "univers": "Auto & Mobilité",
+      "excerpt": "Pas de garage ni de place de parking privée ? Voici les 5 vraies solutions pour recharger sereinement une voiture électrique en habitat collectif ou en copropriété.",
+      "old_html": "",
+      "content": {
+        "meta_title": "TOP 5 recharger sa voiture électrique sans borne à domicile",
+        "meta_description": "Vous vivez en appartement sans place de parking privée ? Découvrez les 5 meilleures solutions pour recharger votre voiture électrique sans borne à domicile en 2026.",
+        "hook": "Pas de garage, pas de problème : voici comment recharger une électrique quand on habite en appartement.",
+        "univers": "Auto & Mobilité",
+        "reading_time_min": 8,
+        "keywords": [
+          "recharger voiture électrique sans borne",
+          "recharge voiture électrique appartement",
+          "borne de recharge copropriété",
+          "recharge voiture électrique en ville",
+          "droit à la prise copropriété",
+          "borne recharge gratuite supermarché",
+          "recharge électrique sans place de parking"
+        ],
+        "intro_html": "<p>Vous roulez en voiture électrique ou envisagez de passer le cap, mais vous vivez en appartement, sans garage ni place de parking attitrée ? C'est aujourd'hui la situation la plus fréquente en zone urbaine, et pourtant elle bloque encore beaucoup d'acheteurs potentiels. Bonne nouvelle : l'absence de borne privée à domicile n'est plus un obstacle rédhibitoire en 2026, à condition de connaître les bonnes options et de les combiner intelligemment.</p><p>Entre les bornes rapides sur autoroute, les réseaux de recharge en voirie, les bornes d'entreprise et les solutions collectives en copropriété, il existe désormais un vrai maillage. Ce classement compare les 5 solutions les plus fiables pour recharger sans borne perso, avec pour chacune le coût réel, la contrainte pratique et le profil de conducteur auquel elle correspond le mieux.</p>",
+        "quick_answer": {
+          "summary_html": "<p>Sans borne à domicile, la meilleure stratégie combine une <strong>recharge quotidienne lente et bon marché</strong> (travail, voirie ou copropriété) avec un recours ponctuel aux <strong>bornes rapides</strong> pour les trajets longs. La recharge au travail reste la solution la plus confortable quand elle est disponible ; sinon, les bornes de voirie en accès libre-service constituent l'alternative la plus réaliste au quotidien.</p>",
+          "winner": "Borne installée sur le lieu de travail",
+          "winner_reason": "Elle permet une recharge lente, gratuite ou peu coûteuse, pendant les heures où la voiture est de toute façon immobilisée — l'usage le plus proche d'une recharge à domicile."
+        },
+        "criteria": [
+          {
+            "name": "Coût au kWh",
+            "why": "Le prix varie du simple au triple selon le réseau et la vitesse de charge, un critère décisif sur l'usage annuel."
+          },
+          {
+            "name": "Disponibilité et fiabilité",
+            "why": "Une borne en panne ou déjà occupée annule tout l'intérêt de la solution si elle n'est pas fiable au quotidien."
+          },
+          {
+            "name": "Vitesse de recharge adaptée à l'usage",
+            "why": "Recharge lente pour un usage régulier planifié, recharge rapide pour les imprévus et les longs trajets."
+          },
+          {
+            "name": "Simplicité d'accès (carte, appli, abonnement)",
+            "why": "Le nombre d'applications et de badges différents à gérer pèse lourd dans l'expérience réelle."
+          },
+          {
+            "name": "Compatibilité avec un usage sans garage",
+            "why": "La solution doit fonctionner durablement pour un conducteur qui ne dispose d'aucune place de parking privée."
+          }
+        ],
+        "items": [
+          {
+            "rank": 1,
+            "name": "Bornes de recharge rapide sur autoroute et grands axes",
+            "tagline": "L'option de secours et des longs trajets, disponible partout en France",
+            "badge": "Meilleur choix",
+            "rating": 4.6,
+            "price_hint": "0,40 à 0,60 €/kWh",
+            "best_for": "les longs trajets et les recharges d'appoint imprévues",
+            "body_html": "<p>Les réseaux de bornes rapides (aires d'autoroute, hubs urbains dédiés) permettent de récupérer 80 % de batterie en 20 à 40 minutes selon le véhicule. C'est la solution la plus universelle : elle ne dépend d'aucune place de parking personnelle et fonctionne pour n'importe quel conducteur, y compris ceux qui n'ont pas encore trouvé de solution de recharge lente régulière.</p><p>Le prix au kWh est plus élevé que sur une recharge lente, ce qui en fait une solution d'appoint plutôt qu'une routine quotidienne. Pensez à comparer les tarifs entre opérateurs via une <a href=\"/top5/top-5-applications-investir-bourse-debutant-petit-budget.htm\">application de suivi de budget</a> pour garder un œil sur le coût mensuel réel de votre mobilité électrique.</p>",
+            "pros": [
+              "Disponible sur tout le territoire",
+              "Recharge très rapide",
+              "Aucune installation ni abonnement obligatoire",
+              "Idéal pour les longs trajets"
+            ],
+            "cons": [
+              "Tarif au kWh élevé",
+              "Bornes parfois occupées aux heures de pointe",
+              "Pas adapté à une recharge quotidienne économique"
+            ]
+          },
+          {
+            "rank": 2,
+            "name": "Bornes de recharge en voirie et parkings publics",
+            "tagline": "La solution la plus réaliste pour un usage urbain régulier",
+            "badge": "Meilleur rapport qualité-prix",
+            "rating": 4.3,
+            "price_hint": "0,25 à 0,45 €/kWh",
+            "best_for": "un usage quotidien en habitat urbain sans place privée",
+            "body_html": "<p>De plus en plus de villes déploient des bornes accélérées directement sur voirie ou dans les parkings publics, souvent en zone résidentielle. L'idée : se garer près de chez soi le soir, brancher la voiture pendant plusieurs heures, et repartir le lendemain avec une batterie pleine, sans jamais avoir besoin de garage.</p><p>La contrainte principale reste la disponibilité de la place : dans les quartiers denses, il faut parfois anticiper et vérifier l'occupation via l'application dédiée avant de partir chercher une borne libre. Une bonne connaissance des emplacements proches de son domicile fait toute la différence sur la praticité au quotidien.</p>",
+            "pros": [
+              "Tarif modéré",
+              "Proche du domicile",
+              "Compatible avec une recharge de nuit",
+              "En expansion dans la plupart des grandes villes"
+            ],
+            "cons": [
+              "Disponibilité variable selon le quartier",
+              "Nécessite de vérifier l'occupation via une application",
+              "Toutes les villes ne sont pas encore équipées"
+            ]
+          },
+          {
+            "rank": 3,
+            "name": "Recharge sur le lieu de travail",
+            "tagline": "La routine la plus proche d'une recharge à domicile",
+            "badge": "Coup de cœur",
+            "rating": 4.5,
+            "price_hint": "souvent gratuit ou à tarif préférentiel employeur",
+            "best_for": "les actifs qui se déplacent en voiture pour se rendre au travail",
+            "body_html": "<p>De plus en plus d'entreprises installent des bornes sur leur parking, parfois dans le cadre d'une politique de mobilité durable ou pour accompagner le verdissement de leur flotte. Pour un salarié qui travaille sur site 4 ou 5 jours par semaine, c'est mécaniquement la solution la plus confortable : la voiture recharge pendant les heures de travail, sans détour ni contrainte supplémentaire.</p><p>Le principal frein est simplement la disponibilité de cette infrastructure chez son employeur. Cela vaut la peine de se renseigner auprès des ressources humaines ou du service généraux : plusieurs dispositifs d'aide existent aujourd'hui pour inciter les entreprises à installer ces bornes.</p>",
+            "pros": [
+              "Gratuit ou très peu coûteux",
+              "Zéro contrainte de trajet supplémentaire",
+              "Recharge lente adaptée à la batterie",
+              "Valorisé par les politiques RSE des entreprises"
+            ],
+            "cons": [
+              "Dépend entièrement de l'employeur",
+              "Inutile en télétravail",
+              "Nombre de bornes parfois limité par rapport aux salariés"
+            ]
+          },
+          {
+            "rank": 4,
+            "name": "Bornes gratuites ou low-cost chez les enseignes partenaires",
+            "tagline": "Rechargez pendant vos courses, sans effort ni détour",
+            "badge": "Petit budget",
+            "rating": 4,
+            "price_hint": "gratuit à 0,30 €/kWh",
+            "best_for": "combiner recharge et courses hebdomadaires",
+            "body_html": "<p>Supermarchés, centres commerciaux et enseignes de bricolage installent de plus en plus de bornes sur leurs parkings, certaines totalement gratuites pour attirer la clientèle. En les repérant près de chez soi, il devient possible de caler une bonne partie de sa recharge hebdomadaire sur des trajets déjà prévus (courses, sorties du week-end), sans y consacrer de temps dédié.</p><p>La puissance de charge est généralement modeste, ce qui convient bien à une recharge d'appoint mais reste insuffisant comme unique solution pour un gros rouleur. À combiner idéalement avec une autre option de ce classement.</p>",
+            "pros": [
+              "Souvent gratuit",
+              "Se combine avec un trajet déjà prévu",
+              "Bonne solution d'appoint hebdomadaire",
+              "Aucune démarche administrative"
+            ],
+            "cons": [
+              "Puissance de charge limitée",
+              "Places parfois monopolisées longtemps",
+              "Insuffisant seul pour un usage intensif"
+            ]
+          },
+          {
+            "rank": 5,
+            "name": "Installation collective en copropriété (droit à la prise)",
+            "tagline": "La solution la plus durable pour qui reste plusieurs années au même endroit",
+            "badge": "Solution long terme",
+            "rating": 3.8,
+            "price_hint": "500 à 1 500 € par place (aides déductibles)",
+            "best_for": "les copropriétaires ou locataires stables souhaitant une solution pérenne",
+            "body_html": "<p>Le « droit à la prise » permet à tout occupant d'un immeuble disposant d'un parking de demander l'installation d'une borne sur son propre emplacement, aux frais du demandeur mais sans que la copropriété puisse s'y opposer sans motif sérieux. C'est la solution la plus proche d'une vraie recharge à domicile pour qui a la chance d'avoir une place de parking dans son immeuble, même sans garage individuel.</p><p>Le principal frein est le délai administratif : notification au syndic, étude technique, parfois plusieurs mois avant la pose. Des aides existent pour réduire le reste à charge, à vérifier au moment du <a href=\"/top5/top-5-methodes-reperer-doublons-assurance-reduire-cotisations.htm\">bilan annuel de vos contrats et assurances</a> qui accompagne souvent ce type de gros achat.</p>",
+            "pros": [
+              "Recharge lente économique une fois installée",
+              "Solution durable sur plusieurs années",
+              "Cadre légal protecteur pour le demandeur",
+              "Aides financières disponibles"
+            ],
+            "cons": [
+              "Délai d'installation de plusieurs mois",
+              "Coût initial à avancer",
+              "Nécessite de disposer d'une place de parking en immeuble"
+            ]
+          }
+        ],
+        "comparison": {
+          "title": "Comparatif express des 5 solutions de recharge sans domicile",
+          "columns": [
+            "Critère",
+            "Bornes rapides autoroute",
+            "Voirie & parkings publics",
+            "Recharge au travail",
+            "Bornes enseignes partenaires",
+            "Copropriété (droit à la prise)"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Coût au kWh",
+                "0,40-0,60 €",
+                "0,25-0,45 €",
+                "Souvent gratuit",
+                "Gratuit à 0,30 €",
+                "Faible une fois installée"
+              ]
+            },
+            {
+              "cells": [
+                "Vitesse de charge",
+                "Très rapide",
+                "Accélérée",
+                "Lente",
+                "Modérée",
+                "Lente"
+              ]
+            },
+            {
+              "cells": [
+                "Usage idéal",
+                "Longs trajets",
+                "Quotidien urbain",
+                "Jours travaillés",
+                "Courses hebdo",
+                "Résidence stable"
+              ]
+            },
+            {
+              "cells": [
+                "Contrainte principale",
+                "Tarif élevé",
+                "Disponibilité variable",
+                "Dépend de l'employeur",
+                "Puissance limitée",
+                "Délai d'installation"
+              ]
+            }
+          ]
+        },
+        "callouts": [
+          {
+            "type": "astuce",
+            "title": "Combinez plusieurs solutions",
+            "html": "<p>Aucune de ces options n'est obligatoirement exclusive : la plupart des conducteurs sans borne à domicile combinent une recharge lente régulière (travail ou voirie) avec un usage ponctuel des bornes rapides pour les imprévus.</p>"
+          },
+          {
+            "type": "info",
+            "title": "Vérifiez la disponibilité en temps réel",
+            "html": "<p>La majorité des réseaux proposent une application indiquant en direct les bornes libres. Un réflexe à prendre avant chaque trajet pour éviter les mauvaises surprises.</p>"
+          },
+          {
+            "type": "budget",
+            "title": "Anticipez le coût mensuel réel",
+            "html": "<p>En mixant recharge rapide occasionnelle et recharge lente au quotidien, le coût moyen reste généralement inférieur à celui d'un plein de carburant classique, mais mérite d'être suivi précisément le premier mois.</p>"
+          },
+          {
+            "type": "attention",
+            "title": "N'attendez pas la panne sèche",
+            "html": "<p>Sans borne perso, mieux vaut recharger dès que l'occasion se présente (30-40 %) plutôt que d'attendre d'être proche de la réserve, pour ne jamais dépendre d'une seule borne disponible.</p>"
+          }
+        ],
+        "faq": [
+          {
+            "question": "Peut-on vraiment vivre sans borne à domicile avec une voiture électrique ?",
+            "answer_html": "<p>Oui, à condition d'avoir un usage quotidien modéré (moins de 40-50 km par jour) et d'identifier 1 à 2 solutions de recharge lente régulières près de son domicile ou de son travail, complétées par des bornes rapides pour les trajets exceptionnels.</p>"
+          },
+          {
+            "question": "Le droit à la prise s'applique-t-il aussi aux locataires ?",
+            "answer_html": "<p>Oui, le droit à la prise concerne aussi bien les propriétaires que les locataires disposant d'une place de parking dans un immeuble collectif, sous réserve d'en informer le propriétaire ou le syndic.</p>"
+          },
+          {
+            "question": "Combien de temps faut-il pour recharger sur une borne de voirie ?",
+            "answer_html": "<p>Comptez généralement entre 3 et 8 heures pour une charge complète sur une borne accélérée de voirie, ce qui correspond bien à une recharge de nuit ou pendant une journée de travail.</p>"
+          },
+          {
+            "question": "Les bornes gratuites en supermarché sont-elles fiables ?",
+            "answer_html": "<p>Globalement oui, mais leur nombre reste limité par magasin. Il est recommandé de vérifier leur disponibilité via l'application du réseau avant de s'y déplacer spécifiquement.</p>"
+          },
+          {
+            "question": "Faut-il plusieurs badges de recharge différents ?",
+            "answer_html": "<p>Certaines applications et cartes universelles regroupent aujourd'hui l'accès à plusieurs réseaux, ce qui limite le besoin de multiplier les badges physiques, mais il reste utile d'avoir 2 à 3 solutions d'accès pour ne jamais être bloqué.</p>"
+          },
+          {
+            "question": "Est-ce plus cher que de recharger à domicile ?",
+            "answer_html": "<p>En moyenne oui, de 10 à 30 % plus cher selon le mix de solutions utilisé, mais cela reste généralement inférieur au coût d'un plein d'essence équivalent sur la même distance.</p>"
+          }
+        ],
+        "verdict_html": "<p>Sans borne à domicile, la clé n'est pas de trouver une solution unique mais de construire une routine combinant recharge lente régulière et recharge rapide d'appoint. La <strong>recharge au travail</strong> reste, quand elle est disponible, l'option la plus confortable et la plus économique au quotidien. À défaut, les <strong>bornes de voirie</strong> proches du domicile offrent la meilleure alternative urbaine, à condition de bien connaître les emplacements du quartier.</p><p>Pour les copropriétaires stables, investir dans une installation via le droit à la prise reste la solution la plus pérenne sur le long terme, malgré un délai d'installation à anticiper.</p>",
+        "methodology_html": "<p>Ce classement s'appuie sur une comparaison des principaux réseaux de recharge publics et semi-publics disponibles en France en 2026, évalués selon le coût réel au kWh, la disponibilité constatée et l'adéquation avec un usage sans place de parking privée.</p>"
+      }
+    },
+    {
+      "id": 100022,
+      "slug": "top-5-astuces-enlever-tache-vin-rouge-canape-tissu",
+      "title": "TOP 5 des astuces pour enlever une tache de vin rouge sur un canapé en tissu sans l'envoyer au pressing",
+      "date": "2026-07-22T09:05:00",
+      "modified": "2026-07-22T09:05:00",
+      "image": "top-5-astuces-enlever-tache-vin-rouge-canape-tissu.jpg",
+      "univers": "Maison & Déco",
+      "excerpt": "Un verre renversé sur le canapé et la soirée vire au cauchemar ? Ces 5 méthodes testées permettent de faire disparaître une tache de vin rouge sur du tissu, même déjà sèche.",
+      "old_html": "",
+      "content": {
+        "meta_title": "TOP 5 astuces pour enlever une tache de vin sur un canapé",
+        "meta_description": "Vin rouge renversé sur le canapé ? Découvrez 5 méthodes efficaces pour enlever une tache de vin rouge sur un tissu, fraîche ou déjà sèche, sans abîmer la matière.",
+        "hook": "Un verre renversé ne signe pas la fin du canapé : voici comment rattraper le coup en quelques minutes.",
+        "univers": "Maison & Déco",
+        "reading_time_min": 7,
+        "keywords": [
+          "enlever tache de vin rouge canapé",
+          "tache de vin sur tissu",
+          "nettoyer canapé en tissu",
+          "détacher tache de vin séchée",
+          "astuce tache de vin rouge",
+          "nettoyage canapé vin rouge sans pressing"
+        ],
+        "intro_html": "<p>Un verre qui bascule, un enfant qui bouscule la table basse, et voilà une auréole violette qui s'étale sur le canapé du salon. La panique est légitime : le vin rouge est réputé comme l'une des taches les plus difficiles à faire partir d'un tissu, à cause de ses tanins et de ses pigments très colorants qui pénètrent rapidement les fibres.</p><p>Bonne nouvelle : dans la grande majorité des cas, une tache de vin rouge sur un canapé en tissu peut être traitée à la maison, sans pressing ni produit professionnel coûteux, à condition d'agir avec la bonne méthode et sans paniquer. Ce classement présente 5 techniques éprouvées, de la plus rapide en urgence à la solution la plus efficace sur une tache déjà ancienne.</p>",
+        "quick_answer": {
+          "summary_html": "<p>Sur une tache <strong>fraîche</strong>, la meilleure réaction est d'éponger immédiatement (jamais frotter) puis d'appliquer de l'eau gazeuse ou du sel fin pour absorber le pigment avant qu'il ne s'incruste. Sur une tache <strong>déjà sèche</strong>, un mélange de liquide vaisselle et d'eau oxygénée diluée donne les meilleurs résultats sur la majorité des tissus d'ameublement.</p>",
+          "winner": "Éponger puis traiter à l'eau gazeuse ou au sel",
+          "winner_reason": "C'est le geste réflexe le plus efficace sur une tache fraîche : il limite la pénétration du pigment avant même de sortir un produit détachant."
+        },
+        "criteria": [
+          {
+            "name": "Efficacité sur les tanins du vin rouge",
+            "why": "Le vin rouge contient des pigments et des tanins qui nécessitent une action ciblée, différente d'une tache classique."
+          },
+          {
+            "name": "Rapidité d'action",
+            "why": "Plus la tache est traitée vite, plus les chances de la faire disparaître complètement augmentent."
+          },
+          {
+            "name": "Douceur pour le tissu du canapé",
+            "why": "Certains produits agressifs risquent de décolorer ou d'abîmer un tissu d'ameublement délicat."
+          },
+          {
+            "name": "Facilité de mise en œuvre",
+            "why": "Les ingrédients doivent être accessibles rapidement, souvent déjà présents dans la cuisine ou la salle de bain."
+          },
+          {
+            "name": "Efficacité sur tache sèche ou ancienne",
+            "why": "Toutes les méthodes ne fonctionnent pas aussi bien une fois la tache incrustée depuis plusieurs heures ou jours."
+          }
+        ],
+        "items": [
+          {
+            "rank": 1,
+            "name": "Éponger puis appliquer de l'eau gazeuse",
+            "tagline": "Le réflexe d'urgence à avoir dans la première minute",
+            "badge": "Meilleur choix",
+            "rating": 4.7,
+            "price_hint": "quelques centimes (une bouteille déjà ouverte)",
+            "best_for": "une tache toute fraîche, traitée dans les minutes qui suivent",
+            "body_html": "<p>Le premier geste, avant tout produit, consiste à éponger délicatement la tache avec un linge propre et sec, en tamponnant sans jamais frotter — frotter ne ferait qu'étaler le pigment plus profondément dans les fibres. Une fois l'excédent de liquide absorbé, versez généreusement de l'eau gazeuse directement sur la tache : le gaz carbonique aide à faire remonter le pigment à la surface du tissu.</p><p>Laissez agir quelques minutes puis épongez à nouveau avec un linge propre, en renouvelant l'opération autant que nécessaire. Cette méthode fonctionne remarquablement bien sur une tache traitée dans le quart d'heure suivant l'accident, avant que le vin n'ait eu le temps de sécher.</p>",
+            "pros": [
+              "Action immédiate et très efficace",
+              "Ingrédient déjà présent lors d'un apéritif ou repas",
+              "Aucun risque pour la couleur du tissu",
+              "Ne nécessite aucun rinçage agressif"
+            ],
+            "cons": [
+              "Moins efficace sur une tache déjà sèche",
+              "Nécessite d'agir vite",
+              "Peut laisser une légère auréole d'humidité à sécher"
+            ]
+          },
+          {
+            "rank": 2,
+            "name": "Le sel fin pour absorber avant séchage",
+            "tagline": "L'astuce de grand-mère qui limite les dégâts en attendant de traiter",
+            "badge": "Meilleur rapport qualité-prix",
+            "rating": 4.3,
+            "price_hint": "moins d'1 €",
+            "best_for": "absorber une tache fraîche quand on n'a pas d'eau gazeuse sous la main",
+            "body_html": "<p>Immédiatement après avoir épongé le surplus de liquide, recouvrez généreusement la tache d'une bonne couche de sel fin. Le sel agit comme une éponge naturelle et va progressivement absorber le pigment encore en surface avant qu'il ne s'incruste dans les fibres du tissu.</p><p>Laissez agir 15 à 20 minutes, le temps que le sel change légèrement de couleur en absorbant le vin, puis aspirez ou brossez délicatement les résidus. Cette méthode se combine très bien avec un traitement complémentaire au liquide vaisselle si une trace persiste.</p>",
+            "pros": [
+              "Ingrédient présent dans toutes les cuisines",
+              "Action immédiate sans frotter",
+              "Complète bien les autres méthodes",
+              "Sans risque pour le tissu"
+            ],
+            "cons": [
+              "N'élimine pas totalement une tache déjà ancienne à elle seule",
+              "Nécessite un aspirateur ou une brosse pour retirer les résidus",
+              "Moins spectaculaire seul sur les grosses taches"
+            ]
+          },
+          {
+            "rank": 3,
+            "name": "Liquide vaisselle et eau oxygénée diluée",
+            "tagline": "La combinaison la plus efficace sur une tache déjà sèche",
+            "badge": "Coup de cœur",
+            "rating": 4.5,
+            "price_hint": "2 à 5 €",
+            "best_for": "une tache ancienne ou déjà séchée depuis plusieurs heures",
+            "body_html": "<p>Mélangez une cuillère à café de liquide vaisselle avec un peu d'eau oxygénée diluée à 10 volumes et un peu d'eau tiède. Appliquez le mélange sur la tache à l'aide d'un chiffon propre, en tamponnant sans frotter, puis laissez poser une dizaine de minutes avant de rincer avec un linge humide propre.</p><p>Cette combinaison est particulièrement efficace sur les taches déjà sèches, car l'eau oxygénée agit sur les pigments du vin tandis que le liquide vaisselle dissout les résidus gras. Testez toujours au préalable sur une zone peu visible du canapé, certains tissus colorés pouvant réagir différemment.</p>",
+            "pros": [
+              "Très efficace sur tache ancienne",
+              "Produits peu coûteux et faciles à trouver",
+              "Action à la fois sur les pigments et les résidus",
+              "Résultat visible dès la première application"
+            ],
+            "cons": [
+              "Nécessite un test préalable sur zone discrète",
+              "Déconseillé sur certains tissus délicats ou colorés",
+              "Un léger rinçage supplémentaire est parfois nécessaire"
+            ]
+          },
+          {
+            "rank": 4,
+            "name": "Bicarbonate de soude en pâte",
+            "tagline": "La solution économique et écologique pour un entretien régulier",
+            "badge": "Petit budget",
+            "rating": 4,
+            "price_hint": "moins de 2 €",
+            "best_for": "un entretien doux et régulier, sans produit chimique",
+            "body_html": "<p>Mélangez du bicarbonate de soude avec un peu d'eau pour former une pâte, à appliquer directement sur la tache de vin. Laissez sécher complètement, ce qui peut prendre plusieurs heures, puis brossez et aspirez les résidus. Le bicarbonate agit en douceur pour absorber le pigment sans agresser les fibres du tissu.</p><p>Cette méthode convient particulièrement bien aux personnes qui privilégient des <a href=\"/top5/top-5-astuces-de-nettoyage-ecologiques-pour-une-maison-propre-et-durable.htm\">solutions de nettoyage écologiques à la maison</a>, en évitant les produits chimiques agressifs pour l'entretien courant du mobilier.</p>",
+            "pros": [
+              "Totalement naturel et économique",
+              "Sans danger pour les enfants ou animaux",
+              "Bon complément aux autres méthodes",
+              "Utile aussi contre les odeurs résiduelles"
+            ],
+            "cons": [
+              "Résultat plus progressif que les autres méthodes",
+              "Temps de séchage assez long",
+              "Moins puissant seul sur une tache très incrustée"
+            ]
+          },
+          {
+            "rank": 5,
+            "name": "Faire appel à un professionnel du nettoyage textile",
+            "tagline": "La solution de dernier recours sur les tissus fragiles ou les grosses taches",
+            "badge": "Solution de secours",
+            "rating": 3.9,
+            "price_hint": "40 à 120 € selon la taille du canapé",
+            "best_for": "les canapés en tissu délicat ou les taches très étendues et anciennes",
+            "body_html": "<p>Si la tache résiste à toutes les méthodes maison, ou si le canapé est recouvert d'un tissu particulièrement délicat (velours, lin clair, tissu ancien), faire appel à un professionnel du nettoyage textile à domicile reste la solution la plus sûre pour ne pas aggraver le problème.</p><p>Un professionnel dispose de produits et de techniques d'injection-extraction capables de traiter en profondeur des taches anciennes sans risquer d'endommager la matière. C'est un investissement à réserver aux cas les plus difficiles, après avoir tenté les solutions plus économiques de ce classement.</p>",
+            "pros": [
+              "Résultat professionnel garanti",
+              "Adapté aux tissus fragiles",
+              "Traite aussi les taches très anciennes",
+              "Souvent accompagné d'une garantie de résultat"
+            ],
+            "cons": [
+              "Coût nettement plus élevé",
+              "Nécessite de prendre rendez-vous",
+              "Délai d'intervention parfois de plusieurs jours"
+            ]
+          }
+        ],
+        "comparison": {
+          "title": "Comparatif express des 5 méthodes anti-tache de vin rouge",
+          "columns": [
+            "Critère",
+            "Eau gazeuse",
+            "Sel fin",
+            "Liquide vaisselle + eau oxygénée",
+            "Bicarbonate de soude",
+            "Professionnel"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Efficacité tache fraîche",
+                "Excellente",
+                "Très bonne",
+                "Bonne",
+                "Moyenne",
+                "Excellente"
+              ]
+            },
+            {
+              "cells": [
+                "Efficacité tache sèche",
+                "Faible",
+                "Faible",
+                "Excellente",
+                "Bonne",
+                "Excellente"
+              ]
+            },
+            {
+              "cells": [
+                "Coût",
+                "Quasi nul",
+                "Quasi nul",
+                "2-5 €",
+                "Moins de 2 €",
+                "40-120 €"
+              ]
+            },
+            {
+              "cells": [
+                "Douceur pour le tissu",
+                "Très douce",
+                "Douce",
+                "À tester avant",
+                "Très douce",
+                "Adaptée sur mesure"
+              ]
+            }
+          ]
+        },
+        "callouts": [
+          {
+            "type": "astuce",
+            "title": "Toujours tamponner, jamais frotter",
+            "html": "<p>Le réflexe numéro un à retenir : frotter une tache de vin rouge l'étale et l'incruste davantage dans les fibres. Tamponnez toujours de l'extérieur vers l'intérieur de la tache.</p>"
+          },
+          {
+            "type": "attention",
+            "title": "Testez avant d'appliquer sur toute la tache",
+            "html": "<p>Quelle que soit la méthode choisie, testez-la d'abord sur une zone peu visible du canapé (sous un coussin, à l'arrière) pour vérifier l'absence de décoloration.</p>"
+          },
+          {
+            "type": "eco",
+            "title": "Privilégiez les solutions naturelles au quotidien",
+            "html": "<p>Le sel, le bicarbonate et l'eau gazeuse permettent de traiter la majorité des taches du quotidien sans recourir à des produits chimiques agressifs pour la maison.</p>"
+          },
+          {
+            "type": "info",
+            "title": "Le blanc, jamais sur du vin rouge",
+            "html": "<p>Contrairement à une idée reçue, verser du vin blanc sur une tache de vin rouge n'a pas d'effet démontré et ajoute surtout du liquide supplémentaire à éponger.</p>"
+          }
+        ],
+        "faq": [
+          {
+            "question": "Faut-il agir différemment selon la couleur du canapé ?",
+            "answer_html": "<p>Oui : sur un tissu clair ou coloré, mieux vaut privilégier l'eau gazeuse et le sel, moins risqués, et réserver l'eau oxygénée aux tissus foncés après un test préalable, certains colorants pouvant être sensibles au blanchiment.</p>"
+          },
+          {
+            "question": "Une tache de vin rouge peut-elle partir plusieurs jours après ?",
+            "answer_html": "<p>Oui, c'est plus difficile mais pas impossible. La combinaison liquide vaisselle et eau oxygénée diluée reste la plus efficace sur une tache ancienne, parfois en répétant l'opération à plusieurs reprises.</p>"
+          },
+          {
+            "question": "Peut-on utiliser de l'eau de Javel sur un canapé en tissu ?",
+            "answer_html": "<p>Ce n'est pas recommandé sur un tissu d'ameublement classique : l'eau de Javel risque de décolorer durablement la matière. Elle est à réserver aux tissus blancs prévus pour ce type de traitement.</p>"
+          },
+          {
+            "question": "Le nettoyeur vapeur est-il efficace sur une tache de vin ?",
+            "answer_html": "<p>Il peut aider à finaliser le nettoyage après un prétraitement, mais utilisé seul sur une tache de vin fraîche, la chaleur risque au contraire de fixer le pigment dans les fibres.</p>"
+          },
+          {
+            "question": "Comment éviter que la tache ne laisse une auréole après séchage ?",
+            "answer_html": "<p>Séchez toujours en tamponnant du centre vers l'extérieur avec un linge sec propre, et évitez de sécher la zone avec un sèche-cheveux qui pourrait fixer un résidu de pigment restant.</p>"
+          },
+          {
+            "question": "Quand faut-il renoncer aux méthodes maison ?",
+            "answer_html": "<p>Si après deux ou trois tentatives la tache reste visible, ou si le tissu est particulièrement fragile (velours, soie d'ameublement), il est plus prudent de passer directement à un professionnel du nettoyage textile.</p>"
+          }
+        ],
+        "verdict_html": "<p>Face à une tache de vin rouge fraîche, le duo <strong>eau gazeuse et sel fin</strong> reste le réflexe le plus efficace et le plus accessible, à condition d'agir dans les premières minutes. Sur une tache déjà sèche, le mélange <strong>liquide vaisselle et eau oxygénée diluée</strong> offre les meilleurs résultats pour la majorité des tissus d'ameublement.</p><p>Dans tous les cas, patience et douceur restent les meilleures alliées : mieux vaut répéter une méthode douce plusieurs fois que de frotter énergiquement au risque d'abîmer le tissu du canapé.</p>",
+        "methodology_html": "<p>Ce classement s'appuie sur les méthodes de détachage les plus couramment recommandées pour les tissus d'ameublement, évaluées selon leur efficacité sur tache fraîche et sèche, leur douceur pour la matière et leur facilité de mise en œuvre avec des produits courants.</p>"
       }
     }
   ]
